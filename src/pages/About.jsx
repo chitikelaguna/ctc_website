@@ -40,8 +40,8 @@ const About = () => {
             <div className="about-hero-orbit about-hero-orbit-one" />
             <div className="about-hero-orbit about-hero-orbit-two" />
             <img
-              src="/images/about/learners-collaboration-hero.png.png"
-              alt="Learners collaborating during a technology training session"
+              src="/images/about/Workspace.png"
+              alt="Career Transformation Center founder at a laptop beside learning books"
             />
             <div className="about-hero-note">
               <Sparkles aria-hidden="true" />
@@ -94,7 +94,7 @@ const About = () => {
         <div className="container about-founder-grid">
           <div className="about-founder-image-wrap">
             <img
-              src="/images/about/founder-sarika-office.png"
+              src="/images/founder/founder.jpeg"
               alt="Founder of Career Transformation Center"
               className="about-founder-image"
             />
@@ -105,10 +105,12 @@ const About = () => {
             <h2>Ravuri Sarika</h2>
             <p className="about-founder-role">Founder &amp; Owner, Career Transformation Center</p>
             <blockquote>
-              “I believe that talent is not limited by a person's degree,
-              background or previous career experience. The right learning
-              environment, practical skills and consistent guidance can open
-              new possibilities for anyone willing to learn.”
+              “I started Career Transformation Center with a simple belief – everyone deserves a fair chance to build a better future.
+              In today’s fast changing world, the right skills can open new doors, create opportunities and transform lives.
+              My vision is to make practical, industry relevant learning accessible to all – working professionals, 
+              fresh graduates and anyone who is willing to learn and grow. At CTC, we don’t just teach tools, 
+              we help you solve real business problems, build confidence and take meaningful steps towards your career goals.
+              Because when you grow, a brighter tomorrow becomes possible.”
             </blockquote>
             <p className="about-founder-signature">— Ravuri Sarika</p>
           </div>

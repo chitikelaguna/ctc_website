@@ -46,13 +46,9 @@ const Hero = () => {
             <div className="hero-shape hero-shape-one" />
             <div className="hero-shape hero-shape-two" />
             <img
-              src="/images/about/learners-collaboration-hero.png.png"
+              src="/images/about/Virtual_Learning.png"
               alt="Learners collaborating during a technology training session"
             />
-            <div className="hero-float-card hero-float-card-top">
-              <GraduationCap aria-hidden="true" />
-              <span>In-Demand Skills</span>
-            </div>
             <div className="hero-float-card hero-float-card-bottom">
               <BriefcaseBusiness aria-hidden="true" />
               <span>Career Growth</span>

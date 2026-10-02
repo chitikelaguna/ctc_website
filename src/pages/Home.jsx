@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   BookOpen,
@@ -14,12 +15,16 @@ import {
 
 import Hero from "../components/Hero";
 import CourseGrid from "../components/CourseGrid";
+import FAQ from "../components/FAQ";
 import SectionTitle from "../components/SectionTitle";
+import Testimonials from "../components/Testimonials";
 
 import courses from "../data/courses";
 import institute from "../data/institute";
 
 const Home = () => {
+  const [aboutImageFailed, setAboutImageFailed] = useState(false);
+
   const benefits = [
     {
       icon: Target,
@@ -84,25 +89,37 @@ const Home = () => {
             <div className="home-about-visual">
               <div className="home-about-orbit home-about-orbit-one" />
               <div className="home-about-orbit home-about-orbit-two" />
-              <img
-                src="/images/hero/hero-background.jpg"
-                alt="Technology learning workspace with laptop, coding, analytics, and career development materials"
-              />
-
-              <div className="home-about-float home-about-float-top">
-                <BookOpen aria-hidden="true" />
-                <span>Practical Learning</span>
-              </div>
-              <div className="home-about-float home-about-float-side">
-                <Target aria-hidden="true" />
-                <span>Career-Focused Skills</span>
-              </div>
-              <div className="home-about-float home-about-float-bottom">
-                <Users aria-hidden="true" />
-                <span>Learner Support</span>
+              <div className="home-about-image">
+                {aboutImageFailed ? (
+                  <div className="home-about-image-fallback" role="img" aria-label="Technology learning and collaboration">
+                    <Laptop aria-hidden="true" />
+                    <span>Technology learning and collaboration</span>
+                  </div>
+                ) : (
+                  <img
+                    src="/images/about/learners-collaboration-hero.png.png"
+                    alt="Learners collaborating during a technology training session"
+                    onError={() => setAboutImageFailed(true)}
+                  />
+                )}
               </div>
 
-              <div className="home-about-training">   
+              <div className="home-about-badges">
+                <div className="home-about-float">
+                  <BookOpen aria-hidden="true" />
+                  <span>Practical Learning</span>
+                </div>
+                <div className="home-about-float">
+                  <Target aria-hidden="true" />
+                  <span>Career-Focused Skills</span>
+                </div>
+                <div className="home-about-float">
+                  <Users aria-hidden="true" />
+                  <span>Learner Support</span>
+                </div>
+              </div>
+
+              <div className="home-about-training">
                 <div className="home-about-training-heading">
                   <MonitorPlay aria-hidden="true" />
                   <h3>Our Training Format</h3>
@@ -152,6 +169,9 @@ const Home = () => {
           <CourseGrid courses={courses} />
         </div>
       </section>
+
+      <Testimonials />
+      <FAQ />
 
       <section className="section approach-section">
         <div className="container">
