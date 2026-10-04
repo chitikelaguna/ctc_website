@@ -12,6 +12,8 @@ import {
 import courses from "../data/courses";
 import SectionTitle from "../components/SectionTitle";
 
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyGKSmsJ2Z1KW_lLACnBiW6yIFfUbGIDXLkOrYrKcjDG9TuUYmIf0ER5SL8tsbHw4fHVw/exec";
+
 const Contact = () => {
   const location = useLocation();
   const selectedCourse = location.state?.selectedCourse || "";
@@ -25,6 +27,8 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (selectedCourse) {
@@ -39,20 +43,51 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    if (isSubmitting) return;
 
-    console.log("Student enquiry:", formData);
+    setSubmitted(false);
+    setSubmissionError("");
+    setIsSubmitting(true);
 
-    setSubmitted(true);
+    const enquiry = {
+      fullName: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      course: formData.course,
+      message: formData.message,
+    };
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      course: "",
-      message: "",
-    });
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify(enquiry),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}.`);
+      }
+
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        course: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Student enquiry submission failed:", error);
+      setSubmissionError(
+        "We couldn't submit your enquiry. Please try again. Your details are still in the form."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -195,16 +230,20 @@ const Contact = () => {
                 required
               />
 
-              <button type="submit" className="btn btn-primary full-width">
-                Submit Enquiry
+              <button
+                type="submit"
+                className="btn btn-primary full-width"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit Enquiry"}
               </button>
 
               {submitted && (
-                <p className="success-message">
-                  Your enquiry has been recorded in this demo. Email
-                  integration will be added later.
+                <p className="success-message" role="status">
+                  Your enquiry has been submitted successfully.
                 </p>
               )}
+              {submissionError && <p role="alert">{submissionError}</p>}
             </form>
           </div>
         </div>

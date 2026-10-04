@@ -4,14 +4,14 @@ const testimonials = [
 		name: "Santosh Kumar Chintala",
 		course: "SQL, Spotfire & Tableau Workshop",
 		review:
-			"I would like to thank Susheel Kumar Ravuri for explaining SQL, Spotfire, and Tableau concepts in a clear and practical manner. The concepts were presented in a way that even non-IT professionals could easily understand and practice. The clarity and depth of the training were among the biggest highlights for me. The workshop was well conducted, with an appropriate pace and duration. I have been able to apply the knowledge and techniques I learned during the sessions.",
+			"I would like to thank Ravuri Sarika for explaining SQL, Spotfire, and Tableau concepts in a clear and practical manner. The concepts were presented in a way that even non-IT professionals could easily understand and practice. The clarity and depth of the training were among the biggest highlights for me. The workshop was well conducted, with an appropriate pace and duration. I have been able to apply the knowledge and techniques I learned during the sessions.",
 	},
 	{
 		id: "niharika-london",
 		name: "Niharika London",
 		course: "Business Intelligence",
 		review:
-			"I am delighted to share my experience with Susheel Kumar's Business Intelligence course, particularly its focus on SQL, Spotfire, and Tableau. Susheel's expertise and passion for Business Intelligence are truly remarkable. His deep knowledge of Spotfire and Tableau, combined with his ability to explain complex concepts in an accessible manner, made the course incredibly valuable. His teaching methods seamlessly integrate theoretical concepts with practical applications, helping students understand not just the tools but also how to apply them effectively in real-world scenarios. His enthusiasm and commitment to teaching significantly enhanced my skills in Business Intelligence. After completing the course, I received offers from reputed MNCs for a BI Developer role and began a new chapter in my career.",
+			"I am delighted to share my experience with Ravuri Sarika's Business Intelligence course, particularly its focus on SQL, Spotfire, and Tableau. Ravuri Sarika's expertise and passion for Business Intelligence are truly remarkable. His deep knowledge of Spotfire and Tableau, combined with his ability to explain complex concepts in an accessible manner, made the course incredibly valuable. His teaching methods seamlessly integrate theoretical concepts with practical applications, helping students understand not just the tools but also how to apply them effectively in real-world scenarios. His enthusiasm and commitment to teaching significantly enhanced my skills in Business Intelligence. After completing the course, I received offers from reputed MNCs for a BI Developer role and began a new chapter in my career.",
 	},
 	{
 		id: "rakesh-bathula",
