@@ -56,6 +56,33 @@ const CourseDetails = () => {
                 <li key={topic}>✓ {topic}</li>
               ))}
             </ul>
+
+            {course.technologiesCovered && (
+              <>
+                <h2>Technologies Covered</h2>
+
+                <ul className="topic-list">
+                  {course.technologiesCovered.map((technology) => (
+                    <li key={technology.name}>
+                      <strong>{technology.name}:</strong>{" "}
+                      {technology.description}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+
+            {course.learningOutcomes && (
+              <>
+                <h2>Learning Outcomes</h2>
+
+                <ul className="topic-list">
+                  {course.learningOutcomes.map((outcome) => (
+                    <li key={outcome}>✓ {outcome}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
 
           <aside className="course-sidebar">
@@ -73,13 +100,21 @@ const CourseDetails = () => {
               <strong>Level:</strong> {course.level}
             </p>
 
-            <p>
-              <strong>Training:</strong> 100% Online
-            </p>
+            {course.trainingMode ? (
+              <p>
+                <strong>Training Mode:</strong> {course.trainingMode}
+              </p>
+            ) : (
+              <>
+                <p>
+                  <strong>Training:</strong> 100% Online
+                </p>
 
-            <p>
-              <strong>Platform:</strong> Live Classes over Zoom
-            </p>
+                <p>
+                  <strong>Platform:</strong> Live Classes over Zoom
+                </p>
+              </>
+            )}
 
             <h4>Real-World Use Case</h4>
 

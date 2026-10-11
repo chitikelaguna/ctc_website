@@ -19,12 +19,17 @@ const Courses = () => {
         <div className="course-grid">
           {courses.map((course) => (
             <article className="course-card" key={course.id}>
-              <div className="course-icon">
+              <div
+                className={`course-icon${course.isNew ? " course-icon-new" : ""}`}
+              >
                 <img
                   src={course.image}
                   alt={course.title}
                   className="course-image"
                 />
+                {course.isNew && (
+                  <span className="course-new-badge">NEW</span>
+                )}
               </div>
 
               <div className="course-content">

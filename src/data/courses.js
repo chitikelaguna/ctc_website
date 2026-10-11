@@ -199,6 +199,81 @@ const courses = [
     level: "Career Focused",
     image: "/images/courses/mega-bundle.png",
   },
+
+  {
+    id: 6,
+    slug: "python-full-stack-development",
+    title: "Python Full Stack Development",
+    shortTitle: "Python Full Stack Development",
+    tagline: "Build and Deploy Complete Web Applications",
+    category: "Full Stack Development",
+    shortDescription:
+      "Learn Python, frontend and backend development, databases, and deployment by building full-stack applications.",
+
+    description:
+      "Learn Python Full Stack Development from the fundamentals to deployment. Build complete web applications by learning Python programming, frontend development, backend development, databases, version control, and real-world project deployment.",
+
+    topics: [
+      "Python programming fundamentals and object-oriented programming",
+      "Responsive frontend development with HTML5, CSS3, and JavaScript",
+      "Backend development with Django and REST APIs",
+      "Database design and CRUD operations with MySQL",
+      "Version control and collaboration with Git and GitHub",
+      "Building complete, real-world full-stack applications",
+      "Configuring and deploying projects to production",
+    ],
+
+    technologiesCovered: [
+      {
+        name: "Python",
+        description:
+          "Syntax, variables, data types, functions, OOP, modules, exception handling, and practical programming.",
+      },
+      {
+        name: "Frontend Development",
+        description:
+          "HTML5, CSS3, JavaScript, responsive web design, and DOM manipulation.",
+      },
+      {
+        name: "Backend Development",
+        description:
+          "Django, REST APIs, API development, and integration between frontend and backend.",
+      },
+      {
+        name: "Database",
+        description:
+          "MySQL, SQL queries, CRUD operations, database design, and connecting databases with Django.",
+      },
+      {
+        name: "Version Control",
+        description:
+          "Git, GitHub, repositories, commits, branches, and collaboration basics.",
+      },
+      {
+        name: "Projects",
+        description: "Build complete, real-world full-stack applications.",
+      },
+      {
+        name: "Deployment",
+        description:
+          "Prepare, configure, and deploy a full-stack project, including environment variables and production configuration.",
+      },
+    ],
+
+    idealFor: [
+      "Beginners",
+      "Students",
+      "Freshers",
+      "Aspiring Full Stack Developers",
+      "Career Switchers",
+    ],
+
+    duration: "4–6 Months",
+    level: "Beginner Friendly",
+    isNew: true,
+    trainingMode: "100% Online — Live Classes over Zoom",
+    image: "/images/courses/Python Full Stack.png",
+  },
 ];
 
 export default courses;
