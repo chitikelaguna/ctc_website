@@ -31,7 +31,7 @@ The website is built for a professional training brand and includes a polished l
 - Vite
 - React Router DOM
 - Lucide React icons
-- CSS Modules / custom CSS files
+- Custom CSS files
 
 ## Project Structure
 
@@ -45,45 +45,47 @@ ctc_website/
 │       ├── about/
 │       ├── courses/
 │       ├── founder/
-│       ├── hero/
 │       └── logo/
 ├── src/
 │   ├── App.css
 │   ├── App.jsx
 │   ├── main.jsx
 │   ├── components/
-│   │   ├── Button.jsx
 │   │   ├── CourseCard.jsx
 │   │   ├── CourseGrid.jsx
+│   │   ├── FAQ.jsx
 │   │   ├── Footer.jsx
 │   │   ├── Hero.jsx
 │   │   ├── Navbar.jsx
 │   │   ├── ScrollToTop.jsx
-│   │   └── SectionTitle.jsx
+│   │   ├── SectionTitle.jsx
+│   │   └── Testimonials.jsx
 │   ├── data/
 │   │   ├── courses.js
+│   │   ├── faqs.js
 │   │   ├── institute.js
-│   │   ├── learningPaths.js
 │   │   └── testimonials.js
 │   ├── pages/
 │   │   ├── About.jsx
 │   │   ├── Contact.jsx
 │   │   ├── CourseDetails.jsx
+│   │   ├── GenerativeAiCourseDetails.jsx
+│   │   ├── MegaBundleCourseDetails.jsx
+│   │   ├── PowerAppsCourseDetails.jsx
+│   │   ├── PythonFullStackCourseDetails.jsx
 │   │   ├── Courses.jsx
 │   │   ├── Home.jsx
 │   │   ├── LearningApproach.jsx
-│   │   └── NotFound.jsx
-│   └── styles/
-│       ├── about.css
-│       ├── contact.css
-│       ├── courses.css
-│       ├── footer.css
-│       ├── global.css
-│       ├── hero.css
-│       ├── learning.css
-│       └── navbar.css
+│   │   ├── NotFound.jsx
+│   │   ├── TableauCourseDetails.jsx
+│   │   ├── course-details.css
+│   │   ├── courses.css
+│   │   └── home-courses.css
 └── README.md
 ```
+
+`App.css` provides the shared site styles. The course catalog, Home course cards,
+and premium course detail pages import their page-specific stylesheets.
 
 ## Main Pages and Routes
 
@@ -100,7 +102,8 @@ ctc_website/
 The website uses centralized data files within the `src/data` folder:
 
 - `courses.js` — program details, duration, topics, use cases, and ideal learner groups
-- `institute.js` — institute info, founder, tagline, training mode, and learning phases
+- `institute.js` — institute info, founder, tagline, training mode, and learning approach
+- `faqs.js` and `testimonials.js` — content displayed by the shared Home page sections
 
 This structure makes the product easy to extend with additional courses or promotional content.
 
@@ -131,6 +134,11 @@ npm run preview
 ```
 Previews the production build locally.
 
+```bash
+npm run lint
+```
+Runs ESLint when the ESLint executable is installed and configured.
+
 ## Run Locally
 
 ```bash
@@ -140,9 +148,11 @@ Then open the local Vite URL shown in the terminal.
 
 ## Notes
 
-- The contact form currently logs enquiry data to the browser console as a frontend demo.
+- The contact form submits enquiries through the existing external form integration.
+- The SQL & Python for Data Analysts detail page provides a downloadable text syllabus.
 - Course and institute content are static and can be updated easily from the data files.
-- Assets such as banners and course images are stored under the `public/images` directory.
+- Course and institute images are stored under the `public/images` directory. The CTC logo
+  is also used as the site favicon.
 
 ## Project Purpose
 

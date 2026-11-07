@@ -29,11 +29,14 @@ const About = () => {
               to help individuals unlock their potential and build successful
               careers in the technology-driven world.
             </p>
-            <div className="about-hero-features">
-              <span><Laptop aria-hidden="true" /> Practical Learning</span>
-              <span><GraduationCap aria-hidden="true" /> Expert Guidance</span>
-              <span><BriefcaseBusiness aria-hidden="true" /> Better Opportunities</span>
-            </div>
+            <ul className="about-hero-features">
+              <li><Laptop aria-hidden="true" /> Practical Learning</li>
+              <li><GraduationCap aria-hidden="true" /> Expert Guidance</li>
+              <li><BriefcaseBusiness aria-hidden="true" /> Career Opportunities</li>
+            </ul>
+            <Link to="/courses" className="btn btn-primary about-hero-action">
+              Explore Our Courses <ArrowRight aria-hidden="true" />
+            </Link>
           </div>
 
           <div className="about-hero-visual">

@@ -203,60 +203,60 @@ const courses = [
   {
     id: 6,
     slug: "python-full-stack-development",
-    title: "Python Full Stack Development",
-    shortTitle: "Python Full Stack Development",
-    tagline: "Build and Deploy Complete Web Applications",
-    category: "Full Stack Development",
+    title: "Python Full Stack with AI",
+    shortTitle: "Python Full Stack with AI",
+    tagline: "Build Full-Stack Applications with AI",
+    category: "Full Stack Development with AI",
     shortDescription:
-      "Learn Python, frontend and backend development, databases, and deployment by building full-stack applications.",
+      "Learn to build complete web applications and AI-powered solutions using Python through practical full-stack and AI integration projects.",
 
     description:
-      "Learn Python Full Stack Development from the fundamentals to deployment. Build complete web applications by learning Python programming, frontend development, backend development, databases, version control, and real-world project deployment.",
+      "Learn to build complete web applications and AI-powered solutions using Python. Master frontend development, backend development, databases, APIs, Git and GitHub, project deployment, and practical AI integration. Build real-world projects that combine full-stack development with modern AI capabilities.",
 
     topics: [
-      "Python programming fundamentals and object-oriented programming",
-      "Responsive frontend development with HTML5, CSS3, and JavaScript",
-      "Backend development with Django and REST APIs",
-      "Database design and CRUD operations with MySQL",
-      "Version control and collaboration with Git and GitHub",
-      "Building complete, real-world full-stack applications",
-      "Configuring and deploying projects to production",
+      "Python fundamentals and object-oriented programming",
+      "HTML5, CSS3, JavaScript, and responsive web development",
+      "Django backend development and REST APIs",
+      "MySQL, SQL queries, CRUD operations, and database integration",
+      "Git and GitHub",
+      "Generative AI fundamentals and prompt engineering",
+      "Calling AI APIs from Python applications",
+      "Integrating AI features into web applications",
+      "Building and deploying full-stack and AI-powered projects",
     ],
 
     technologiesCovered: [
       {
         name: "Python",
         description:
-          "Syntax, variables, data types, functions, OOP, modules, exception handling, and practical programming.",
+          "Core Python, functions, OOP, modules, and exception handling.",
       },
       {
-        name: "Frontend Development",
+        name: "Frontend",
         description:
-          "HTML5, CSS3, JavaScript, responsive web design, and DOM manipulation.",
+          "HTML5, CSS3, JavaScript, and responsive design.",
       },
       {
-        name: "Backend Development",
-        description:
-          "Django, REST APIs, API development, and integration between frontend and backend.",
+        name: "Backend",
+        description: "Django and REST APIs.",
       },
       {
         name: "Database",
+        description: "MySQL, SQL, and CRUD operations.",
+      },
+      {
+        name: "AI Integration",
         description:
-          "MySQL, SQL queries, CRUD operations, database design, and connecting databases with Django.",
+          "Generative AI fundamentals, prompt engineering, AI APIs, and AI-powered application features.",
       },
       {
         name: "Version Control",
-        description:
-          "Git, GitHub, repositories, commits, branches, and collaboration basics.",
+        description: "Git and GitHub.",
       },
       {
-        name: "Projects",
-        description: "Build complete, real-world full-stack applications.",
-      },
-      {
-        name: "Deployment",
+        name: "Projects & Deployment",
         description:
-          "Prepare, configure, and deploy a full-stack project, including environment variables and production configuration.",
+          "Full-stack projects, AI integration, environment configuration, and deployment.",
       },
     ],
 

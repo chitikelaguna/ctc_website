@@ -1,10 +1,12 @@
 import CourseCard from "./CourseCard";
 
-const CourseGrid = ({ courses }) => {
+const CourseGrid = ({ courses, variant = "home" }) => {
+  const isCatalog = variant === "catalog";
+
   return (
-    <div className="course-grid">
+    <div className={isCatalog ? "courses-grid" : "home-courses-grid"}>
       {courses.map((course) => (
-        <CourseCard key={course.id} course={course} />
+        <CourseCard key={course.id} course={course} variant={variant} />
       ))}
     </div>
   );

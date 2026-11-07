@@ -21,6 +21,7 @@ import Testimonials from "../components/Testimonials";
 
 import courses from "../data/courses";
 import institute from "../data/institute";
+import "./home-courses.css";
 
 const Home = () => {
   const [aboutImageFailed, setAboutImageFailed] = useState(false);
@@ -159,14 +160,20 @@ const Home = () => {
       </section>
 
       <section className="section courses-section">
-        <div className="container">
+        <div className="container home-courses-container">
           <SectionTitle
-            subtitle="Our Programs"
+            subtitle="OUR PROGRAMS"
             title="Choose Your Learning Path"
             description="Explore practical programs designed for different career goals."
           />
 
           <CourseGrid courses={courses} />
+
+          <div className="home-courses-more">
+            <Link to="/courses" className="home-courses-more-link">
+              View All Courses <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </section>
 

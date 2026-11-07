@@ -1,73 +1,156 @@
-import SectionTitle from "../components/SectionTitle";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  BookOpen,
+  CalendarDays,
+  ChartNoAxesColumnIncreasing,
+  Code2,
+  GraduationCap,
+  PencilRuler,
+  UsersRound,
+} from "lucide-react";
 
 import institute from "../data/institute";
+import "./learning-approach.css";
 
-const LearningApproach = () => {
-  return (
-    <>
-      <section className="page-banner">
-        <div className="container">
-          <h1>Learning Approach</h1>
-          <p>Learn → Practice → Build → Grow</p>
+const learningSteps = [
+  {
+    title: "Learn",
+    icon: BookOpen,
+    description:
+      "Understand concepts through structured lessons and expert explanations.",
+    tone: "mint",
+  },
+  {
+    title: "Practice",
+    icon: PencilRuler,
+    description:
+      "Apply your knowledge with hands-on exercises and assignments.",
+    tone: "peach",
+  },
+  {
+    title: "Build",
+    icon: Code2,
+    description:
+      "Create real-world projects and solutions to strengthen your skills.",
+    tone: "blue",
+  },
+  {
+    title: "Grow",
+    icon: ChartNoAxesColumnIncreasing,
+    description:
+      "Develop confidence, build a portfolio, and advance your career with our guidance.",
+    tone: "green",
+  },
+];
+
+const trainingBenefits = [
+  "Live interactive classes",
+  "Hands-on practice sessions",
+  "Doubt clearing and mentorship",
+];
+
+const LearningApproach = () => (
+  <div className="learning-approach-page">
+    <section className="learning-hero">
+      <div className="learning-page-container learning-hero-grid">
+        <div className="learning-hero-copy">
+          <span className="learning-eyebrow">OUR APPROACH</span>
+          <h1>Learning That Builds Careers</h1>
+          <p>
+            A practical, hands-on, and career-focused learning approach designed
+            to help you gain real skills, work on real projects, and grow with
+            confidence.
+          </p>
         </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <SectionTitle
-            subtitle="Our Approach"
-            title="Learning That Builds Confidence"
-            description="We combine conceptual learning with hands-on assignments, practical exercises, real-world business use cases and projects."
+        <div className="learning-hero-visual">
+          <div className="learning-orbit learning-orbit-one" />
+          <div className="learning-orbit learning-orbit-two" />
+          <img
+            className="learning-hero-image"
+            src="/images/hero/learning%20approach.png"
+            alt="Learners taking part in an online technology class"
           />
+        </div>
+      </div>
+    </section>
 
-          <div className="learning-steps">
-            {institute.approach.map((step, index) => (
-              <div className="learning-step" key={step}>
-                <span>0{index + 1}</span>
+    <section className="learning-journey-section">
+      <div className="learning-page-container">
+        <header className="learning-section-heading">
+          <span className="learning-eyebrow">OUR LEARNING JOURNEY</span>
+          <h2>Learn <span aria-hidden="true">→</span> Practice <span aria-hidden="true">→</span> Build <span aria-hidden="true">→</span> Grow</h2>
+          <p>
+            A step-by-step approach to help you gain skills, apply knowledge,
+            and achieve your career goals.
+          </p>
+        </header>
 
-                <h2>{step}</h2>
+        <div className="learning-journey-grid">
+          {learningSteps.map(({ title, icon: Icon, description, tone }, index) => (
+            <article className={`learning-journey-card tone-${tone}`} key={title}>
+              <span className="learning-step-number">0{index + 1}</span>
+              <span className="learning-step-icon"><Icon aria-hidden="true" /></span>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
 
-                <p>
-                  {index === 0 &&
-                    "Understand concepts and build a strong foundation."}
+    <section className="learning-training-section">
+      <div className="learning-page-container learning-training-panel">
+        <header className="learning-section-heading">
+          <span className="learning-eyebrow">TRAINING FORMAT</span>
+          <h2>100% Online · Live Classes over Zoom</h2>
+          <p>Flexible schedules designed to fit your learning goals.</p>
+        </header>
 
-                  {index === 1 &&
-                    "Apply your knowledge through exercises and assignments."}
-
-                  {index === 2 &&
-                    "Create practical projects and real-world solutions."}
-
-                  {index === 3 &&
-                    "Develop confidence and continue your career growth."}
-                </p>
+        <div className="learning-training-grid">
+          {[
+            { title: "Weekdays", schedule: institute.weekdays },
+            { title: "Weekends", schedule: institute.weekends },
+          ].map(({ title, schedule }) => (
+            <article className="learning-training-card" key={title}>
+              <span className="learning-training-icon"><CalendarDays aria-hidden="true" /></span>
+              <div className="learning-training-copy">
+                <h3>{title}</h3>
+                <p>{schedule}</p>
+                <ul>
+                  {trainingBenefits.map((benefit) => (
+                    <li key={benefit}>{benefit}</li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section className="section info-section">
-        <div className="container">
-          <SectionTitle
-            subtitle="Training Format"
-            title="100% Online • Live Classes over Zoom"
-          />
-
-          <div className="two-column">
-            <div className="info-box">
-              <h3>Weekdays</h3>
-              <p>Monday–Friday: Morning batches only</p>
-            </div>
-
-            <div className="info-box">
-              <h3>Weekends</h3>
-              <p>Saturday & Sunday: Morning and evening batches</p>
-            </div>
+    <section className="learning-cta-section">
+      <div className="learning-page-container">
+        <div className="learning-cta-banner">
+          <div className="learning-cta-decoration learning-cta-decoration-one" />
+          <div className="learning-cta-decoration learning-cta-decoration-two" />
+          <div className="learning-cta-icon"><UsersRound aria-hidden="true" /></div>
+          <div className="learning-cta-copy">
+            <span className="learning-cta-eyebrow">READY TO START?</span>
+            <h2>Take the Next Step in Your Learning Journey</h2>
+            <p>
+              Join our industry-focused programs and build the skills for a
+              brighter future.
+            </p>
           </div>
+          <Link to="/courses" className="learning-cta-button">
+            Explore Our Courses <ArrowRight aria-hidden="true" />
+          </Link>
         </div>
-      </section>
-    </>
-  );
-};
+      </div>
+    </section>
+  </div>
+);
 
 export default LearningApproach;

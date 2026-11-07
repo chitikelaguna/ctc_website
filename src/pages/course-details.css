@@ -1,0 +1,1024 @@
+.sql-course-page {
+  --sql-ink: #102a3a;
+  --sql-ink-soft: #435967;
+  --sql-muted: #647985;
+  --sql-teal: #008c8c;
+  --sql-teal-dark: #007373;
+  --sql-mint: #e2f5f1;
+  --sql-ivory: #fffaf4;
+  --sql-border: #dce9e5;
+  color: var(--sql-ink);
+  background: var(--sql-ivory);
+  font-family: "Inter", "DM Sans", sans-serif;
+}
+
+.sql-course-container {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.sql-course-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 0 52px;
+  border-radius: 0 0 28px 28px;
+  background:
+    radial-gradient(ellipse at 85% 12%, rgba(0, 140, 140, .09), transparent 34%),
+    var(--sql-mint);
+}
+
+.sql-course-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  margin-bottom: 25px;
+  color: #526b74;
+  font-size: 12px;
+}
+
+.sql-course-breadcrumb a {
+  flex: 0 0 auto;
+  transition: color .2s ease;
+}
+
+.sql-course-breadcrumb a:hover {
+  color: var(--sql-teal-dark);
+}
+
+.sql-course-breadcrumb svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  color: #8a9b9f;
+}
+
+.sql-course-breadcrumb span {
+  overflow: hidden;
+  color: var(--sql-ink);
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sql-course-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, .88fr);
+  gap: 54px;
+  align-items: center;
+}
+
+.sql-course-hero-copy {
+  max-width: 625px;
+  padding: 15px 0;
+}
+
+.sql-course-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 13px;
+  border: 1px solid rgba(0, 140, 140, .18);
+  border-radius: 999px;
+  color: #006c6c;
+  background: rgba(255, 255, 255, .72);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.sql-course-badge span {
+  color: #7bbdb4;
+}
+
+.sql-course-hero h1 {
+  max-width: 590px;
+  margin: 19px 0 15px;
+  color: var(--sql-ink);
+  font-size: clamp(39px, 4.35vw, 58px);
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: 1.08;
+}
+
+.sql-course-lead {
+  max-width: 570px;
+  margin: 0;
+  color: var(--sql-ink-soft);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.sql-course-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  gap: 13px 24px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sql-course-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #26424d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sql-course-highlights svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  color: var(--sql-teal);
+}
+
+.sql-course-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 27px;
+}
+
+.sql-course-page .sql-course-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 19px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.sql-course-page .sql-course-button:hover {
+  transform: translateY(-2px);
+}
+
+.sql-course-page .sql-course-button:focus-visible {
+  outline: 3px solid #164b54;
+  outline-offset: 3px;
+}
+
+.sql-course-page .sql-course-button svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+}
+
+.sql-course-page .sql-course-button-primary {
+  color: #fff;
+  background: var(--sql-teal);
+  box-shadow: 0 9px 20px rgba(0, 140, 140, .17);
+}
+
+.sql-course-page .sql-course-button-primary:hover {
+  background: var(--sql-teal-dark);
+  box-shadow: 0 11px 23px rgba(0, 115, 115, .22);
+}
+
+.sql-course-page .sql-course-button-secondary {
+  border-color: var(--sql-teal);
+  color: #006f70;
+  background: #fff;
+}
+
+.sql-course-page .sql-course-button-secondary:hover {
+  background: #f4fffc;
+}
+
+.sql-course-hero-art {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 390px;
+  place-items: center;
+  isolation: isolate;
+}
+
+.sql-course-art-orbit {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(0, 140, 140, .18);
+  border-radius: 50%;
+}
+
+.sql-course-art-orbit-one {
+  width: min(100%, 410px);
+  aspect-ratio: 1;
+}
+
+.sql-course-art-orbit-two {
+  width: min(83%, 340px);
+  aspect-ratio: 1;
+  border-color: rgba(232, 176, 129, .35);
+}
+
+.sql-course-illustration {
+  width: min(100%, 408px);
+  max-height: 405px;
+  border: 8px solid rgba(255, 255, 255, .86);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 22px 48px rgba(16, 42, 58, .12);
+  object-fit: contain;
+}
+
+.sql-course-art-label {
+  position: absolute;
+  right: 0;
+  bottom: 31px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  border: 1px solid rgba(0, 140, 140, .13);
+  border-radius: 10px;
+  color: var(--sql-ink);
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(16, 42, 58, .1);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sql-course-art-label svg {
+  width: 18px;
+  height: 18px;
+  color: var(--sql-teal);
+}
+
+.sql-course-feature-section {
+  padding: 30px 0 20px;
+}
+
+.sql-course-feature-grid,
+.sql-course-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.sql-course-feature-card,
+.sql-course-audience-card {
+  border: 1px solid rgba(16, 42, 58, .06);
+  border-radius: 15px;
+  box-shadow: 0 8px 22px rgba(16, 42, 58, .045);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.sql-course-feature-card:hover,
+.sql-course-audience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(16, 42, 58, .09);
+}
+
+.sql-course-feature-card {
+  display: flex;
+  min-height: 178px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 17px;
+  text-align: center;
+}
+
+.sql-course-page .tone-blue {
+  background: #eaf4fc;
+}
+
+.sql-course-page .tone-cream {
+  background: #fff4df;
+}
+
+.sql-course-page .tone-lavender {
+  background: #f1edfb;
+}
+
+.sql-course-page .tone-peach {
+  background: #fff0e8;
+}
+
+.sql-course-feature-icon,
+.sql-course-audience-icon {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  place-items: center;
+  border: 1px solid rgba(0, 140, 140, .12);
+  border-radius: 13px;
+  color: var(--sql-teal);
+  background: rgba(255, 255, 255, .78);
+}
+
+.sql-course-feature-icon svg,
+.sql-course-audience-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.sql-course-feature-card h2 {
+  margin: 13px 0 5px;
+  color: var(--sql-ink);
+  font-size: 15px;
+  letter-spacing: -.02em;
+}
+
+.sql-course-feature-card p {
+  margin: 0;
+  color: var(--sql-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.sql-course-content-section {
+  padding: 49px 0 55px;
+}
+
+.sql-course-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(335px, .82fr);
+  gap: 52px;
+  align-items: start;
+}
+
+.sql-course-overview {
+  padding-top: 8px;
+}
+
+.sql-course-eyebrow {
+  color: var(--sql-teal-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.sql-course-overview h2,
+.sql-course-section-heading h2 {
+  margin: 9px 0 13px;
+  color: var(--sql-ink);
+  font-size: clamp(27px, 3vw, 35px);
+  letter-spacing: -.045em;
+}
+
+.sql-course-overview-copy {
+  max-width: 680px;
+  margin: 0;
+  color: var(--sql-ink-soft);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.sql-course-overview-followup {
+  margin-top: 12px;
+}
+
+.sql-course-overview .sql-course-outcomes-title {
+  margin-top: 33px;
+  margin-bottom: 13px;
+  font-size: 23px;
+}
+
+.sql-course-topic-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sql-course-topic-list li {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8eeea;
+  color: #344e5a;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.sql-course-topic-list li > span {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--sql-teal);
+}
+
+.sql-course-topic-list svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 3;
+}
+
+.sql-course-info-card {
+  padding: 27px;
+  border: 1px solid rgba(0, 140, 140, .2);
+  border-radius: 17px;
+  background: #eaf7f3;
+  box-shadow: 0 13px 34px rgba(16, 42, 58, .055);
+}
+
+.sql-course-info-card > h2 {
+  margin: 0 0 17px;
+  color: var(--sql-ink);
+  font-size: 21px;
+  letter-spacing: -.035em;
+}
+
+.sql-course-info-list {
+  margin: 0;
+}
+
+.sql-course-info-list > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(16, 42, 58, .09);
+  font-size: 12px;
+}
+
+.sql-course-info-list dt {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  color: #536a72;
+}
+
+.sql-course-info-list dt svg {
+  width: 16px;
+  height: 16px;
+  color: var(--sql-teal);
+}
+
+.sql-course-info-list dd {
+  margin: 0;
+  color: var(--sql-ink);
+  font-weight: 700;
+  text-align: right;
+}
+
+.sql-course-use-case {
+  margin-top: 20px;
+}
+
+.sql-course-use-case h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 9px;
+  color: var(--sql-ink);
+  font-size: 14px;
+}
+
+.sql-course-use-case h3 svg {
+  width: 18px;
+  height: 18px;
+  color: var(--sql-teal);
+}
+
+.sql-course-use-case p {
+  margin: 0;
+  color: var(--sql-ink-soft);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.sql-course-info-button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.python-full-stack-course-page .sql-course-technology-list li {
+  align-items: flex-start;
+}
+
+.python-full-stack-course-page .sql-course-technology-list li > span {
+  margin-top: 2px;
+}
+
+.python-full-stack-course-page .sql-course-technology-content {
+  min-width: 0;
+}
+
+.python-full-stack-course-page .sql-course-technology-content h3 {
+  margin: 0 0 4px;
+  color: var(--sql-ink);
+  font-size: 14px;
+}
+
+.python-full-stack-course-page .sql-course-technology-content p {
+  margin: 0;
+  color: var(--sql-ink-soft);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.sql-course-info-audience {
+  margin-top: 17px;
+}
+
+.sql-course-info-audience h3 {
+  margin: 0 0 7px;
+  color: var(--sql-ink);
+  font-size: 13px;
+}
+
+.sql-course-info-audience p {
+  margin: 0;
+  color: var(--sql-ink-soft);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.sql-course-audience-section {
+  padding: 48px 0 72px;
+  background: #f5faf7;
+}
+
+.sql-course-section-heading {
+  max-width: 650px;
+  margin: 0 auto 27px;
+  text-align: center;
+}
+
+.sql-course-section-heading h2 {
+  margin-bottom: 8px;
+}
+
+.sql-course-section-heading > p {
+  margin: 0;
+  color: var(--sql-muted);
+  font-size: 14px;
+}
+
+.sql-course-audience-card {
+  display: flex;
+  min-height: 194px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 18px;
+  text-align: center;
+}
+
+.sql-course-audience-card h3 {
+  margin: 13px 0 6px;
+  color: var(--sql-ink);
+  font-size: 16px;
+  letter-spacing: -.02em;
+}
+
+.sql-course-audience-card p {
+  max-width: 220px;
+  margin: 0;
+  color: var(--sql-ink-soft);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1020px) {
+  .sql-course-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, .84fr);
+    gap: 28px;
+  }
+
+  .sql-course-hero-art {
+    min-height: 340px;
+  }
+
+  .sql-course-illustration {
+    width: min(100%, 350px);
+  }
+
+  .sql-course-art-label {
+    right: -4px;
+  }
+
+  .sql-course-content-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(310px, .9fr);
+    gap: 30px;
+  }
+
+  .sql-course-info-card {
+    padding: 23px;
+  }
+
+  .powerapps-audience-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .sql-course-hero {
+    padding-top: 22px;
+  }
+
+  .sql-course-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .sql-course-hero-copy {
+    max-width: 680px;
+  }
+
+  .sql-course-hero-art {
+    width: min(100%, 500px);
+    min-height: 0;
+    margin: 6px auto 0;
+    padding: 8px 24px 18px;
+  }
+
+  .sql-course-illustration {
+    width: min(100%, 345px);
+    max-height: 345px;
+  }
+
+  .sql-course-art-orbit-one {
+    width: min(82%, 370px);
+  }
+
+  .sql-course-art-orbit-two {
+    width: min(68%, 300px);
+  }
+
+  .sql-course-art-label {
+    right: 0;
+    bottom: 30px;
+  }
+
+  .sql-course-content-grid {
+    grid-template-columns: 1fr;
+    gap: 29px;
+  }
+
+  .sql-course-info-card {
+    width: 100%;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 620px) {
+  .sql-course-container {
+    width: min(100% - 32px, 560px);
+  }
+
+  .sql-course-hero {
+    padding: 17px 0 27px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .sql-course-breadcrumb {
+    gap: 6px;
+    margin-bottom: 19px;
+    font-size: 11px;
+  }
+
+  .sql-course-breadcrumb svg {
+    width: 12px;
+    height: 12px;
+    flex-basis: 12px;
+  }
+
+  .sql-course-hero h1 {
+    margin-top: 16px;
+    font-size: clamp(34px, 9vw, 47px);
+  }
+
+  .sql-course-lead {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .sql-course-highlights {
+    gap: 12px 10px;
+    margin-top: 18px;
+  }
+
+  .sql-course-highlights li {
+    gap: 7px;
+    font-size: 12px;
+  }
+
+  .sql-course-highlights svg {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+
+  .sql-course-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 22px;
+  }
+
+  .sql-course-page .sql-course-button {
+    min-height: 50px;
+  }
+
+  .sql-course-hero-art {
+    padding: 4px 12px 12px;
+  }
+
+  .sql-course-illustration {
+    width: min(100%, 300px);
+    border-width: 6px;
+    border-radius: 18px;
+  }
+
+  .sql-course-art-label {
+    right: -2px;
+    bottom: 21px;
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+
+  .sql-course-feature-section {
+    padding: 22px 0 8px;
+  }
+
+  .sql-course-feature-grid,
+  .sql-course-audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+  }
+
+  .sql-course-feature-card {
+    min-height: 160px;
+    padding: 15px 11px;
+  }
+
+  .sql-course-feature-card h2 {
+    font-size: 13px;
+  }
+
+  .sql-course-feature-card p {
+    font-size: 11px;
+  }
+
+  .sql-course-content-section {
+    padding: 37px 0 42px;
+  }
+
+  .sql-course-overview h2,
+  .sql-course-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .sql-course-overview-copy {
+    font-size: 14px;
+  }
+
+  .sql-course-overview .sql-course-outcomes-title {
+    margin-top: 27px;
+    font-size: 21px;
+  }
+
+  .sql-course-topic-list li {
+    gap: 9px;
+    font-size: 13px;
+  }
+
+  .sql-course-info-card {
+    padding: 21px 17px;
+  }
+
+  .sql-course-info-list > div {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .sql-course-info-list dt {
+    gap: 6px;
+  }
+
+  .sql-course-use-case p {
+    font-size: 12px;
+  }
+
+  .sql-course-audience-section {
+    padding: 40px 0 53px;
+  }
+
+  .sql-course-audience-card {
+    min-height: 175px;
+    padding: 16px 10px;
+  }
+
+  .sql-course-audience-card h3 {
+    font-size: 14px;
+  }
+
+  .sql-course-audience-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 359px) {
+  .sql-course-container {
+    width: calc(100% - 28px);
+  }
+
+  .sql-course-feature-grid,
+  .sql-course-audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sql-course-feature-card,
+  .sql-course-audience-card {
+    min-height: 145px;
+  }
+
+  .sql-course-breadcrumb {
+    gap: 4px;
+    font-size: 10px;
+  }
+
+  .sql-course-info-list > div {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sql-course-page *,
+  .sql-course-page *::before,
+  .sql-course-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero {
+  min-height: 610px;
+  background:
+    linear-gradient(105deg, #e5f8f5 0%, #c3ece8 43%, #0d4268 76%, #071b34 100%);
+}
+
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-breadcrumb {
+  position: relative;
+  z-index: 1;
+}
+
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero-grid {
+  position: static;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .92fr);
+  gap: 40px;
+}
+
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero-art {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  min-height: 0;
+  pointer-events: none;
+}
+
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-illustration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(76vw, 1080px);
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-art-orbit,
+:is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-art-label {
+  display: none;
+}
+
+.mega-bundle-course-page .sql-course-illustration {
+  top: 50%;
+  width: min(82vw, 1180px);
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: right center;
+  transform: translateY(-50%);
+}
+
+.powerapps-course-page .sql-course-illustration {
+  object-fit: contain;
+  object-position: right center;
+}
+
+.tableau-course-page .sql-course-illustration {
+  top: 50%;
+  width: min(82vw, 1180px);
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: right center;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1020px) {
+  :is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page) .sql-course-hero {
+    min-height: 560px;
+  }
+
+  :is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .78fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  :is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero {
+    min-height: 0;
+    background: linear-gradient(135deg, #e5f8f5, #f7fbf8 76%);
+  }
+
+  :is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero-grid {
+    position: relative;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  :is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-hero-art {
+    position: relative;
+    inset: auto;
+    width: min(100%, 650px);
+    min-height: 0;
+    margin: 6px auto 0;
+    padding: 0;
+    aspect-ratio: 1.5;
+  }
+
+  .sql-python-course-page .sql-course-hero-art {
+    aspect-ratio: 1.9;
+  }
+
+  :is(.python-full-stack-course-page, .mega-bundle-course-page, .generative-ai-course-page, .sql-python-course-page, .powerapps-course-page, .tableau-course-page) .sql-course-illustration {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .sql-python-course-page .sql-course-illustration {
+    object-position: center;
+  }
+
+  .mega-bundle-course-page .sql-course-hero-art {
+    aspect-ratio: 2.2;
+  }
+
+  .mega-bundle-course-page .sql-course-illustration {
+    top: 0;
+    transform: none;
+  }
+
+  .generative-ai-course-page .sql-course-hero-art {
+    aspect-ratio: 1.9;
+  }
+
+  .powerapps-course-page .sql-course-hero-art {
+    aspect-ratio: 1.9;
+  }
+
+  .tableau-course-page .sql-course-hero-art {
+    aspect-ratio: 2.3;
+  }
+
+  .tableau-course-page .sql-course-illustration {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    transform: none;
+    object-position: center;
+  }
+}
